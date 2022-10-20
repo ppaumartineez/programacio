@@ -1,6 +1,5 @@
 #llegir
 #mirar si es nombre
-
 #mostrar misatge de sí o no
 
 def llegirIP():
@@ -29,14 +28,18 @@ def comprovaIP(x):
         print("És una ip NO vàlida. ", ip)
         return False
 
-
-
-
+sortir = False
 #llegir ip sencera (192.168.1.2)
-ip = llegirIP()
-#la dividim en quatre parts (a=192,b=168,c=1,d=2)
-#comprovar tots els trossos amb nombreValid()
-comprovaIP(ip)
-#mostram que es valid
-#nombreValid(ip)
-  
+
+while not sortir:
+    ip = llegirIP()
+    #la dividim en quatre parts (a=192,b=168,c=1,d=2)
+    #comprovar tots els trossos amb nombreValid()
+    if ip != 'sortir':
+        comprovaIP(ip)
+    else:
+        sortir = True
+    #mostram que es valid
+    #nombreValid(ip)
+
+print ("Ha acabat l'excursió")
